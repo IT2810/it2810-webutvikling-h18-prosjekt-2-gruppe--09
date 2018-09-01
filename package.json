@@ -1,0 +1,30 @@
+{
+  "name": "it2810-group9-assignment2",
+  "description": "Web development @ NTNU",
+  "contributors": [
+    {
+      "name": "Håvard Bergheim Olsen"
+    },
+    {
+      "name": "Espen Sørhaug"
+    },
+    {
+      "email": "info@balazsorban.com",
+      "name": "Balázs Orbán",
+      "url": "https://balazsorban.com"
+    }
+  ],
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
