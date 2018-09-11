@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { withStore } from './Store';
 
 class App extends Component {
   render() {
+    console.log(this.props);
     return (
       <div className="App">
         <header className="App-header">
@@ -18,4 +20,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withStore(App);
