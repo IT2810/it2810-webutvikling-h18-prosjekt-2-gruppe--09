@@ -1,0 +1,28 @@
+{
+  "pictures": [
+    {
+      "url": "https://placeholder.pics/svg/400x225/FF0E00-FFFFFF",
+      "category": "abstract"
+    },
+    {
+      "url": "https://placeholder.pics/svg/400x225/130F13-FFA753",
+      "category": "abstract"
+    },
+    {
+      "url": "https://placeholder.pics/svg/400x225/0FCF13-FFAAA3",
+      "category": "abstract"
+    }    
+  ],
+  "texts": [
+    {
+      "text": "Lorem ipsum",
+      "category": "poem"
+    }
+  ],
+  "sounds": [
+    {
+      "url": "sfiukfdshiu",
+      "category": "music"
+    }
+  ]
+}

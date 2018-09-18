@@ -1,6 +1,5 @@
 import React, {Component, createContext} from 'react'
 
-
 const Store = createContext()
 
 /**
@@ -27,12 +26,18 @@ export const withStore = WrappedComponent =>
 
 export default class Database extends Component {
   state = {
+    pictures: [],
+    texts: [],
+    sounds: [],
     // Global state
     testState: "Test state works"
   }
 
   componentDidMount() {
     // Fetch data
+    fetch("./db/data.json")
+      .then(res => res.json())
+      .then(data => this.setState(data))
   }
 
   testFunction = () => console.log("Test function works")
