@@ -1,0 +1,20 @@
+{
+  "pictures": [
+    {
+      "url": "https://placeholder.pics/svg/300x400/61FF86-F394FF/FF0000/kdwjheiukfej",
+      "category": "abstract"
+    }
+  ],
+  "texts": [
+    {
+      "text": "Lorem ipsum",
+      "category": "poem"
+    }
+  ],
+  "sounds": [
+    {
+      "url": "sfiukfdshiu",
+      "category": "music"
+    }
+  ]
+}
