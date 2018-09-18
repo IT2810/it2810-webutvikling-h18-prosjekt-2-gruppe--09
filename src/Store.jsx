@@ -30,7 +30,16 @@ export default class Database extends Component {
     texts: [],
     sounds: [],
     // Global state
-    testState: "Test state works"
+    picture: 1,
+    categories: [
+      {id: 1,
+      name: "abstract"},
+      {id: 2,
+      name: "city"},
+      {id: 3,
+      name: "landscape"}
+      
+    ]
   }
 
   componentDidMount() {
@@ -42,16 +51,19 @@ export default class Database extends Component {
 
   testFunction = () => console.log("Test function works")
 
+  handleDropDown = ({target:{value, name}}) => this.setState({[name]: value}) 
+
   render() {
     return(
-      <Store.Provider
-        value={{
-          testFunction: this.testFunction,
-          ...this.state
-        }}
-      >
-        {this.props.children}
-      </Store.Provider>
+    <Store.Provider
+      value={{
+        testFunction: this.testFunction,
+        handleDropDown: this.handleDropDown,
+        ...this.state
+      }}
+    >
+      {this.props.children}
+    </Store.Provider>
     )
   }
 }
