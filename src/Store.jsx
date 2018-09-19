@@ -30,45 +30,78 @@ export default class Database extends Component {
     texts: [],
     sounds: [],
     // Global state
-    picture: 1,
     categories: [
-      {id: 1,
-      name: "abstract"},
-      {id: 2,
-      name: "city"},
-      {id: 3,
-      name: "landscape"}
+      {
+        id: 1,
+        name: "abstract"
+      },
+      {
+        id: 2,
+        name: "city"
+      },
+      {
+        id: 3,
+        name: "landscape"
+      }
     ],
     types: [
-      {id: 1,
-      name: "picture"},
-      {id: 2,
-      name: "text"},  
-      {id: 3,
-      name: "sound"}],
+      {
+        id: 1,
+        name: "picture"
+      },
+      {
+        id: 2,
+        name: "text"
+      },
+      {
+        id: 3,
+        name: "sound"
+      }
+    ],
     categories: {
       picture: [
-        {id: 1,
-        name: "abstract"},
-        {id: 2,
-        name: "city"},
-        {id: 3,
-        name: "landscape"}],
+        {
+          id: 1,
+          name: "abstract"
+        },
+        {
+          id: 2,
+          name: "city"
+        },
+        {
+          id: 3,
+          name: "landscape"
+        }
+      ],
       text: [
-        {id: 1,
-        name: "text1"},
-        {id: 2,
-        name: "text2"},
-        {id: 3,
-        name: "text3"}],
+        {
+          id: 1,
+          name: "text1"
+        },
+        {
+          id: 2,
+          name: "text2"
+        },
+        {
+          id: 3,
+          name: "text3"
+        }
+      ],
       sound: [
-        {id: 1,
-        name: "abstract"},
-        {id: 2,
-        name: "city"},
-        {id: 3,
-        name: "landscape"}]            
-      },
+        {
+          id: 1,
+          name: "abstract"
+        },
+        {
+          id: 2,
+          name: "city"
+        },
+        {
+          id: 3,
+          name: "landscape"
+        }
+      ]
+    },
     selected: {
       picture: 1,
       text: 1,
@@ -85,19 +118,24 @@ export default class Database extends Component {
 
   testFunction = () => console.log("Test function works")
 
-  handleDropDown = ({target:{value, name}}) => this.setState({[name]: value}) 
+  handleDropDown = ({target:{
+    value, name
+  }}) => this.setState(({selected}) => ({selected: {
+    ...selected,
+    [name]: parseInt(value, 10)
+  }}))
 
   render() {
     return(
-    <Store.Provider
-      value={{
-        testFunction: this.testFunction,
-        handleDropDown: this.handleDropDown,
-        ...this.state
-      }}
-    >
-      {this.props.children}
-    </Store.Provider>
+      <Store.Provider
+        value={{
+          testFunction: this.testFunction,
+          handleDropDown: this.handleDropDown,
+          ...this.state
+        }}
+      >
+        {this.props.children}
+      </Store.Provider>
     )
   }
 }
