@@ -76,11 +76,11 @@ export default class Database extends Component {
       text: [
         {
           id: 1,
-          name: "text1"
+          name: "poem"
         },
         {
           id: 2,
-          name: "text2"
+          name: "quote"
         },
         {
           id: 3,
