@@ -59,7 +59,7 @@ class Slider extends Component {
 
   render() {
     const {
-      pictures, texts, sounds, categories, types
+      pictures, texts, sounds, categories
     } = this.props
     let {selected} = this.props
     const {

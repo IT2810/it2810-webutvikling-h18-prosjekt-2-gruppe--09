@@ -10,7 +10,10 @@ const Slide = ({
           media="(min-width: 768px)"
           srcSet={picture && picture.url}
         />
-        <img src={picture && picture.url}/>
+        <img
+          alt={picture.category}
+          src={picture && picture.url}
+        />
       </picture> : "No picture"
     }
     <p>{text || "No text"}</p>

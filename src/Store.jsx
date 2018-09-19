@@ -30,20 +30,6 @@ export default class Database extends Component {
     texts: [],
     sounds: [],
     // Global state
-    categories: [
-      {
-        id: 1,
-        name: "abstract"
-      },
-      {
-        id: 2,
-        name: "city"
-      },
-      {
-        id: 3,
-        name: "landscape"
-      }
-    ],
     types: [
       {
         id: 1,
