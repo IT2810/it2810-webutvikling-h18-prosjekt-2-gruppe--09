@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
-import {ImgSlide} from './Slide'
+import {Slide} from './Slide'
 import './slider.css'
+import {withStore} from '../Store'
 
-export default class Slider extends Component {
+class Slider extends Component {
 
   state = {
     positionX: 0,
@@ -51,16 +52,32 @@ export default class Slider extends Component {
   handleSlide = _e => {
     this.clearTicker()
     this.setState(({activeSlideIndex: prevIndex}) =>
-      ({activeSlideIndex: prevIndex+1 >= this.props.slides.length ? 0 : prevIndex+1})
+      ({activeSlideIndex: prevIndex+1 >= 4 ? 0 : prevIndex+1})
       , this.setTicker
     )
   }
 
   render() {
-    const {slides} = this.props
+    const {
+      pictures, texts, sounds, categories, types
+    } = this.props
+    let {selected} = this.props
     const {
       positionX, shouldSnap, activeSlideIndex
     } = this.state
+
+    selected = Object.entries(selected)
+      .map(([selectedKey, selectedValue]) =>
+        categories[selectedKey].find(category => selectedValue === category.id).name
+      )
+
+
+    const slides = Array(4).fill({
+      picture: pictures.find(picture => picture.category === selected[0]),
+      text: texts.find(text => text.category === selected[1]),
+      sound: sounds.find(sound => sound.category === selected[2])
+    })
+
 
     return(
       <div className="slider-container">
@@ -73,7 +90,7 @@ export default class Slider extends Component {
                 key={index}
                 style={{zIndex: isFirst ? 99 : 10-index}}
               >
-                <ImgSlide
+                <Slide
                   {...slide}
                   style={{
                     transform: isFirst ? `translateX(${-positionX}px)` : "none",
@@ -101,3 +118,6 @@ export default class Slider extends Component {
     )
   }
 }
+
+
+export default withStore(Slider)

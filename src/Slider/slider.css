@@ -1,16 +1,40 @@
 .slider-container {
   grid-area: slider;
+  margin-top: 24px;
   display: grid;
   grid-template-areas: 
+    "dots next"
     "slide slide"
-    "dots next";
-  margin-bottom: 24px;
 }
 
 .slider {
   grid-area: slide;
   position: relative;
-  margin-bottom: -24px;
+}
+
+.slide {
+  background-color: black;
+  margin-top: -24px;
+  display: grid;
+  color: #FFF;
+  grid-template-areas: 
+  "slide-picture"
+    "slide-text"
+    "slide-audio"
+}
+.slide p, .slide audio {
+  padding: .5em;
+}
+.slide picture{
+  grid-area: slide-picture
+}
+
+.slide p {
+  grid-area: slide-text
+}
+
+.slide audio {
+  grid-area: slide-audio
 }
 
 .first-slide {
@@ -31,7 +55,7 @@
 
 .slider-dots {
   grid-area: dots;
-  align-self: flex-start;
+  align-self: end;
   padding: 0 .5em;
   pointer-events: none;
 }
@@ -59,25 +83,16 @@
   width: 48px;
   height: 48px;
   align-self: end;
-  margin-top: -10px;
   border-radius: 50%;
   background-color: black;
   display: flex;
   justify-content: center;
+  justify-self: end;
   align-items: center;
 }
 
 @media (min-aspect-ratio: 9 / 6), (min-width: 768px) {
-  .slider {
-    justify-self: flex-end;
-  }
-  .slider img {
-    max-height: 60vh;
-  }
   .slider-container {
-    justify-content: flex-end;
-  }
-  .placeholder-slide {
-    left: -12.5%;
+    justify-content: center
   }
 }
