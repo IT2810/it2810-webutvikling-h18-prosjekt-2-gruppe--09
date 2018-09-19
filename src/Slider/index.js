@@ -105,7 +105,7 @@ class Slider extends Component {
         <div className="slider-dots">
           {Array(slides.length).fill(null).map((_key, index) =>
             <span
-              className={`slider-dot ${activeSlideIndex===index ? "active-slide": ""}`}
+              className={`slider-dot ${activeSlideIndex===index ? "active-dot": ""}`}
               key={index}
             >•</span>
           )}
