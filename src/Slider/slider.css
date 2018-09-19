@@ -81,9 +81,3 @@
     left: -12.5%;
   }
 }
-
-@media (min-width: 768px) {
-  .slider img {
-    max-height: 320px;
-  }
-}
