@@ -1,13 +1,12 @@
 import React from 'react'
 import './animations.css'
-import {withStore} from './Store'
 import Slider from './Slider'
 import DropDown from './Selector/DropDown'
 
-const App = ({pictures}) =>
+const App = () =>
   <div className="App">
-    <Slider slides={pictures}/>
-    <DropDown />
+    <DropDown/>
+    <Slider/>
   </div>
 
-export default withStore(App)
+export default App
