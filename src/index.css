@@ -1,11 +1,12 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 1em;
   font-family: sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 }
 
 ul {
@@ -15,4 +16,25 @@ ul {
 
 li {
   list-style-type: none
+}
+
+img {
+  max-width: 100%
+}
+
+blockquote {
+  margin: 0;
+  padding: 0
+}
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+
+cite {
+  display: block;
+  text-align: right;
 }
