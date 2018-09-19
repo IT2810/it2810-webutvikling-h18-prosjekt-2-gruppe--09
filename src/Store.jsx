@@ -106,6 +106,11 @@ export default class Database extends Component {
       picture: 1,
       text: 1,
       sound: 1
+    },
+    labels: {
+      picture: "Picture",
+      text: "Text",
+      sound: "Sound"
     }
   }
 
