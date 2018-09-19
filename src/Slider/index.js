@@ -3,6 +3,9 @@ import {Slide} from './Slide'
 import './slider.css'
 import {withStore} from '../Store'
 
+
+const rand = max => Math.floor(Math.random() * max) + 0
+
 class Slider extends Component {
 
   state = {
@@ -58,10 +61,10 @@ class Slider extends Component {
   }
 
   render() {
-    const {
-      pictures, texts, sounds, categories
+    const {categories} = this.props
+    let {
+      selected, pictures, texts, sounds
     } = this.props
-    let {selected} = this.props
     const {
       positionX, shouldSnap, activeSlideIndex
     } = this.state
@@ -71,11 +74,15 @@ class Slider extends Component {
         categories[selectedKey].find(category => selectedValue === category.id).name
       )
 
+    pictures = pictures.filter(picture => picture.category === selected[0])
+    texts = texts.filter(text => text.category === selected[1])
+    sounds = sounds.filter(sound => sound.category === selected[2])
+
 
     const slides = Array(4).fill({
-      picture: pictures.find(picture => picture.category === selected[0]),
-      text: texts.find(text => text.category === selected[1]),
-      sound: sounds.find(sound => sound.category === selected[2])
+      picture: pictures[rand(pictures.length)],
+      text: texts[rand(texts.length)],
+      sound: sounds[rand(sounds.length)]
     })
 
 
