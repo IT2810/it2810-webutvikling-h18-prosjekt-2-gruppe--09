@@ -15,8 +15,48 @@
   ],
   "texts": [
     {
-      "text": "Lorem ipsum",
-      "category": "poem"
+      "text": "What is so pure as grief? A wreck\nset sail just to be wrecked again.\nTo lose what’s lost–it’s all born lost\nand we just fetch it for a little while,\na dandelion span, a quarter-note.\nEach day an envelope gummed shut\nwith honey and mud....\n",
+      "category": "poem",
+      "author": "Melissa Stein",
+      "title": "Lemon and cedar"
+    },
+    {
+      "text": "Who has seen the wind?\nNeither I nor you:\nBut when the leaves hang trembling,\n The wind is passing through.\n\n Who has seen the wind?\n Neither you nor I:\n But when the trees bow down their heads,\n The wind is passing by.\n",
+      "category": "poem",
+      "author": "Christina Rossetti ",
+      "title": "Who Has Seen the Wind?"
+    },
+    {
+      "text": "All the complicated details\nof the attiring and\nthe disattiring are completed!\nA liquid moon\nmoves gently among\nthe long branches.\nThus having prepared their buds\nagainst a sure winter\nthe wise trees\nstand sleeping in the cold.\n",
+      "category": "poem",
+      "author": "William Carlos Williams",
+      "title": "Winter Trees"
+    },
+    {
+      "text": "Maple leaves turn black in the courtyard.\nLight drives lower and one bluejay crams\nour cold memories out past the sun,\n\neach time your traces come past the shadows\nand visit under my looking-glass fingers\nthat lift and block out the sun.\n\n Come—I’ll trace you one final autumn,\n and you can trace your last homecoming\n into the snow or the sun.\n",
+      "category": "poem",
+      "author": "Annie Finch",
+      "title": "Final Autumn"
+    },
+    {
+      "text": "Do not take life too seriously.\nYou will never get out of it alive.",
+      "category": "quote",
+      "author": "Elbert Hubbard"
+    },
+    {
+      "text": "Laziness is nothing more than the habit of resting before you get tired.",
+      "category": "quote",
+      "author": "Jules Renard"
+    },
+    {
+      "text": "I'm sorry, if you were right, I'd agree with you.",
+      "category": "quote",
+      "author": "Robin Williams"
+    },
+    {
+      "text": "I can resist everything except temptation.",
+      "category": "quote",
+      "author": "Oscar Wilde"
     }
   ],
   "sounds": [
