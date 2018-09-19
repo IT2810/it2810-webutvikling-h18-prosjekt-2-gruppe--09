@@ -1,17 +1,28 @@
 import React from 'react'
 
-const ImgSlide = ({
-  url, category
+const Slide = ({
+  picture, text, sound
 }) =>
-  <picture>
-    <source
-      media="(min-width: 768px)"
-      srcSet={url}
-    />
-    <img
-      alt={category}
-      src={url}
-    />
-  </picture>
+  <div className="slide">
+    {picture ?
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcSet={picture && picture.url}
+        />
+        <img src={picture && picture.url}/>
+      </picture> : "No picture"
+    }
+    <p>{text || "No text"}</p>
+    {sound ?
+      <audio>
+        <source
+          src={sound}
+          type="audio/mp3"
+        />
+      Your browser does not support the audio tag.
+      </audio> : "No audio"
+    }
+  </div>
 
-export {ImgSlide}
+export {Slide}
