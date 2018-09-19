@@ -44,14 +44,14 @@ export default class Database extends Component {
 
   render() {
     return(
-    <Store.Provider
-      value={{
-        testFunction: this.testFunction,
-        ...this.state
-      }}
-    >
-      {this.props.children}
-    </Store.Provider>
+      <Store.Provider
+        value={{
+          testFunction: this.testFunction,
+          ...this.state
+        }}
+      >
+        {this.props.children}
+      </Store.Provider>
     )
   }
 }

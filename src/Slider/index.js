@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { ImgSlide } from './Slide';
+import React, {Component} from 'react'
+import {ImgSlide} from './Slide'
 import './slider.css'
 
 export default class Slider extends Component {
@@ -61,35 +61,35 @@ export default class Slider extends Component {
     const {
       positionX, shouldSnap, activeSlideIndex
     } = this.state
-    
+
     return(
       <div className="slider-container">
         <ul className="slider">
           {slides.map((slide, index) => {
-              const isFirst = index === activeSlideIndex
-              return (
-                <li
-                  key={index}
-                  className={!isFirst ? "placeholder-slide" : "first-slide"}
-                  style={{zIndex: isFirst ? 99 : 10-index}}
-                >
-                  <ImgSlide
-                    {...slide}
-                    style={{
-                      transform: isFirst ? `translateX(${-positionX}px)` : "none",
-                      transition: (isFirst && shouldSnap) ? ".625s" : "0s"
-                    }}
-                  />
-                </li>
-              )
-            }
-            )}
+            const isFirst = index === activeSlideIndex
+            return (
+              <li
+                className={!isFirst ? "placeholder-slide" : "first-slide"}
+                key={index}
+                style={{zIndex: isFirst ? 99 : 10-index}}
+              >
+                <ImgSlide
+                  {...slide}
+                  style={{
+                    transform: isFirst ? `translateX(${-positionX}px)` : "none",
+                    transition: (isFirst && shouldSnap) ? ".625s" : "0s"
+                  }}
+                />
+              </li>
+            )
+          }
+          )}
         </ul>
         <div className="slider-dots">
           {Array(slides.length).fill(null).map((_key, index) =>
             <span
-              key={index}
               className={`slider-dot ${activeSlideIndex===index ? "active-slide": ""}`}
+              key={index}
             >•</span>
           )}
         </div>
