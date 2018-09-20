@@ -4,115 +4,62 @@ import './slider.css'
 import {withStore} from '../Store'
 
 
-const rand = max => Math.floor(Math.random() * max) + 0
-
 class Slider extends Component {
-
   state = {
-    positionX: 0,
-    shouldSnap: false,
-    activeSlideIndex: 0,
-    intervalId: null
+    activeIndex: 0,
+    slides: []
   }
 
-
-  componentDidMount() {this.setTicker()}
-
-  componentWillUnmount() {this.clearTicker()}
-
-
-  ticker = () => this.handleSlide()
-
-  setTicker = () => this.setState({intervalId: setInterval(this.ticker, 10000)})
-
-  clearTicker = () => clearInterval(this.state.intervalId)
-
-
-  handleTouchStart = e => {
-    this.clearTicker()
-    const {positionX} = this.state
-    const width = window.innerWidth
-    this.setState({
-      startX: positionX === width ? width : e.touches[0].pageX,
-      shouldSnap: false
-    })
-  }
-
-  handleTouchEnd = () => {
-    const {positionX} = this.state
-    const width = window.innerWidth
-    this.setState({
-      positionX: positionX > width/3 ? width : 0,
-      shouldSnap: true
-    }, () => this.state.positionX !== 0 && this.handleSlide())
-    this.setTicker()
-  }
-
-  handleTouch = e => {
-    this.setState({positionX: this.state.startX-e.touches[0].pageX})
-  }
-
-  handleSlide = _e => {
-    this.clearTicker()
-    this.setState(({activeSlideIndex: prevIndex}) =>
-      ({activeSlideIndex: prevIndex+1 >= 4 ? 0 : prevIndex+1})
-      , this.setTicker
-    )
-  }
-
-  render() {
+  componentDidUpdate(prevProps) {
     const {categories} = this.props
     let {
       selected, pictures, texts, sounds
     } = this.props
+
+    if (prevProps.pictures !== pictures || prevProps.texts !== texts || prevProps.sounds !== sounds || prevProps.selected !== selected) {
+      selected = Object
+        .entries(selected)
+        .map(([selectedKey, selectedValue]) =>
+          categories[selectedKey].find(category => selectedValue === category.id).name
+        )
+
+      pictures = pictures.filter(picture => picture.category === selected[0])
+      texts = texts.filter(text => text.category === selected[1])
+      sounds = sounds.filter(sound => sound.category === selected[2])
+      const slides = Array(4).fill(null).map((_e, index) => ({
+        picture: pictures[index],
+        text: texts[index],
+        sound: sounds[index]
+      }))
+      this.setState({slides})
+    }
+  }
+
+  handleSlide = _e =>
+    this.setState(({activeIndex}) =>
+      ({activeIndex: activeIndex+1 < 4 ? activeIndex+1 : 0})
+    )
+
+  render() {
     const {
-      positionX, shouldSnap, activeSlideIndex
+      slides, activeIndex
     } = this.state
-
-    selected = Object.entries(selected)
-      .map(([selectedKey, selectedValue]) =>
-        categories[selectedKey].find(category => selectedValue === category.id).name
-      )
-
-    pictures = pictures.filter(picture => picture.category === selected[0])
-    texts = texts.filter(text => text.category === selected[1])
-    sounds = sounds.filter(sound => sound.category === selected[2])
-
-
-    const slides = Array(4).fill({
-      picture: pictures[rand(pictures.length)],
-      text: texts[rand(texts.length)],
-      sound: sounds[rand(sounds.length)]
-    })
-
-
     return(
       <div className="slider-container">
         <ul className="slider">
-          {slides.map((slide, index) => {
-            const isFirst = index === activeSlideIndex
-            return (
-              <li
-                className={!isFirst ? "placeholder-slide" : "first-slide"}
-                key={index}
-                style={{zIndex: isFirst ? 99 : 10-index}}
-              >
-                <Slide
-                  {...slide}
-                  style={{
-                    transform: isFirst ? `translateX(${-positionX}px)` : "none",
-                    transition: (isFirst && shouldSnap) ? ".625s" : "0s"
-                  }}
-                />
-              </li>
-            )
-          }
+          {slides.map((slide, index) =>
+            <Slide
+              className={`slide ${index === activeIndex ? "first-slide" : "placeholder-slide"}`}
+              key={index}
+              style={{zIndex: index === activeIndex ? 99 : 10-index}}
+              {...slide}
+            />
           )}
         </ul>
         <div className="slider-dots">
-          {Array(slides.length).fill(null).map((_key, index) =>
+          {slides.map((_key, index) =>
             <span
-              className={`slider-dot ${activeSlideIndex===index ? "active-dot": ""}`}
+              className={`slider-dot ${activeIndex===index ? "active-dot": ""}`}
               key={index}
             >•</span>
           )}

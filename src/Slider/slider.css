@@ -37,7 +37,8 @@
 }
 .slide picture{
   grid-area: slide-picture;
-  justify-self: center
+  justify-self: center;
+  max-width: 240px;
 }
 
 .slide p {
@@ -121,11 +122,10 @@
     margin-right: -24px;
   }
   .slide {
-    grid-template-columns: 2fr 1fr;
-    min-height: 50vh;
     justify-items: center;
     grid-template-areas: 
       "slide-picture slide-text"
       "slide-picture slide-audio"
     }
+
 }
