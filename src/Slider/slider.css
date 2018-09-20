@@ -35,10 +35,13 @@
 .slide p, .slide audio {
   padding: .5em;
 }
-.slide picture{
+.slide span{
   grid-area: slide-picture;
   justify-self: center;
   max-width: 240px;
+}
+.slide svg {
+  max-height: 240px
 }
 
 .slide p {

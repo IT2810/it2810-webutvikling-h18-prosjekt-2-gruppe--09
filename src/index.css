@@ -13,13 +13,17 @@ ul {
   margin: 0;
   padding: 0
 }
-
+h1 {
+  color: #FFF;
+  text-align: center;
+  font-style: italic;
+}
 li {
   list-style-type: none
 }
 
-img {
-  max-width: 100%
+img, svg {
+  max-width: 100%;
 }
 
 blockquote {
@@ -46,4 +50,8 @@ label, select {
 
 select {
   border-radius: .5em;
+}
+
+label {
+  color: #FFF
 }
