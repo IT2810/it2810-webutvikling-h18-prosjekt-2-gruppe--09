@@ -48,15 +48,15 @@ export default class Database extends Component {
       picture: [
         {
           id: 1,
-          name: "abstract"
+          name: "animals"
         },
         {
           id: 2,
-          name: "city"
+          name: "cars"
         },
         {
           id: 3,
-          name: "landscape"
+          name: "nature"
         }
       ],
       text: [

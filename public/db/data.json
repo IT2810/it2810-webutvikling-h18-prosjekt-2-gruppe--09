@@ -1,17 +1,53 @@
 {
   "pictures": [
     {
-      "url": "https://placeholder.pics/svg/400x225/FF0E00-FFFFFF",
-      "category": "abstract"
+      "url": "./img/animals/1.svg",
+      "category": "animals"
     },
     {
-      "url": "https://placeholder.pics/svg/400x225/130F13-FFA753",
-      "category": "abstract"
+      "url": "./img/animals/2.svg",
+      "category": "animals"
     },
     {
-      "url": "https://placeholder.pics/svg/400x225/0FCF13-FFAAA3",
-      "category": "abstract"
-    }    
+      "url": "./img/animals/3.svg",
+      "category": "animals"
+    },
+    {
+      "url": "./img/animals/4.svg",
+      "category": "animals"
+    },
+    {
+      "url": "./img/cars/1.svg",
+      "category": "cars"
+    },
+    {
+      "url": "./img/cars/2.svg",
+      "category": "cars"
+    },
+    {
+      "url": "./img/cars/3.svg",
+      "category": "cars"
+    },
+    {
+      "url": "./img/cars/4.svg",
+      "category": "cars"
+    },
+    {
+      "url": "./img/nature/1.svg",
+      "category": "nature"
+    },
+    {
+      "url": "./img/nature/2.svg",
+      "category": "nature"
+    },
+    {
+      "url": "./img/nature/3.svg",
+      "category": "nature"
+    },
+    {
+      "url": "./img/nature/4.svg",
+      "category": "nature"
+    }
   ],
   "texts": [
     {
