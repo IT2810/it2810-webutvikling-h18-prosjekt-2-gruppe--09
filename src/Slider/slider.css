@@ -57,7 +57,6 @@
 }
 
 .placeholder-slide {
-  top: 10%;
   position: absolute;
   animation: animate-back .6s forwards;
 }
@@ -109,9 +108,10 @@
 }
 
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   .slider-container {
-    margin: 2em;
+    max-width: 720px;
+    margin: 0 auto;
     justify-content: stretch
   }
   .placeholder-slide {
@@ -121,16 +121,11 @@
     margin-right: -24px;
   }
   .slide {
+    grid-template-columns: 2fr 1fr;
+    min-height: 50vh;
+    justify-items: center;
     grid-template-areas: 
       "slide-picture slide-text"
       "slide-picture slide-audio"
     }
-}
-
-
-@media (min-width: 960px) {
-  .slider-container {
-    max-width: 960px;
-    margin: 0 auto
-  }
 }
