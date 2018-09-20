@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Slide} from './Slide'
+import Slide from './Slide'
 import './slider.css'
 import {withStore} from '../Store'
 
@@ -49,9 +49,9 @@ class Slider extends Component {
         <ul className="slider">
           {slides.map((slide, index) =>
             <Slide
-              className={`slide ${index === activeIndex ? "first-slide" : "placeholder-slide"}`}
+              index={index}
+              isActive={index === activeIndex}
               key={index}
-              style={{zIndex: index === activeIndex ? 99 : 10-index}}
               {...slide}
             />
           )}
