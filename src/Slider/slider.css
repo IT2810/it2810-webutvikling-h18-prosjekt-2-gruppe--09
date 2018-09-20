@@ -1,0 +1,134 @@
+.slider-container {
+  grid-area: slider;
+  margin-top: 24px;
+  display: grid;
+  justify-content: center;
+  grid-template-areas: 
+    "dots next"
+    "slider slider"
+}
+
+.slider {
+  grid-area: slider;
+  position: relative;
+}
+
+.slide {
+  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  border: 1px solid black;
+  
+  margin-top: -24px;
+  display: grid;
+  color: #FFF;
+  border-radius: 24px;
+  overflow: hidden;
+  grid-template-areas: 
+    "slide-picture"
+    "slide-text"
+    "slide-audio"
+}
+
+.slide-text {
+  margin: 1em
+}
+
+.slide p, .slide audio {
+  padding: .5em;
+}
+.slide span{
+  grid-area: slide-picture;
+  justify-self: center;
+  max-width: 240px;
+}
+.slide svg {
+  max-height: 240px
+}
+
+.slide p {
+  grid-area: slide-text
+}
+
+.slide audio {
+  grid-area: slide-audio
+}
+
+.first-slide {
+  border-radius: 24px;
+  box-shadow: 0 0 8px 4px #00000044;
+  position: relative;
+  z-index: 1;
+  animation: animate-forward .6s forwards;
+}
+
+.placeholder-slide {
+  position: absolute;
+  animation: animate-back .6s forwards;
+}
+
+.slider-dots, .slider-next-btn {
+  position: relative;
+  z-index: 100;
+}
+
+.slider-dots {
+  grid-area: dots;
+  align-self: start;
+  padding: 0 .5em;
+  pointer-events: none;
+}
+
+.slider-dot {
+  margin: 3px;
+  padding: 3px;
+  width: 24px;
+  height: 24px;
+  transition: color .625s;
+  color: grey;
+  text-shadow: 1px 2px 4px black;
+}
+
+.active-dot {
+  color: orangered;
+}
+
+.slider-next-btn {
+  cursor: pointer;
+  grid-area: next;
+  line-height: 0;
+  position: relative;
+  color: #FFF;
+  width: 48px;
+  height: 48px;
+  align-self: end;
+  border-radius: 50%;
+  background-color: rgb(59, 15, 15);
+  display: flex;
+  justify-content: center;
+  justify-self: end;
+  align-items: center;
+  top: 16px;
+  right: -8px;
+
+}
+
+
+@media (min-width: 720px) {
+  .slider-container {
+    max-width: 720px;
+    margin: 0 auto;
+    justify-content: stretch
+  }
+  .placeholder-slide {
+    width: 100%
+  }
+  .slider-next-btn {
+    margin-right: -24px;
+  }
+  .slide {
+    justify-items: center;
+    grid-template-areas: 
+      "slide-picture slide-text"
+      "slide-picture slide-audio"
+    }
+
+}

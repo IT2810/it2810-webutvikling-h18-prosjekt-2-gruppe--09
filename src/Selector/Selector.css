@@ -1,0 +1,9 @@
+.dropdowns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap
+}
+
+.dropdowns select, .dropdowns label {
+  margin: .5em 0
+}
