@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react'
+import React, {Component} from 'react'
 import "./Selector.css"
 import {withStore} from '../Store'
 
@@ -13,7 +13,7 @@ class DropDown extends Component {
         {types.map(({
           id, name
         }) =>
-          <Fragment>
+          <div key={id}>
             <label htmlFor={name}>{labels[name]}</label>
             <select
               id={name}
@@ -33,7 +33,7 @@ class DropDown extends Component {
                 </option>
               )}
             </select>
-          </Fragment>
+          </div>
         )}
       </div>
     )
