@@ -70,21 +70,21 @@ export default class Database extends Component {
         },
         {
           id: 3,
-          name: "text3"
+          name: "haiku"
         }
       ],
       sound: [
         {
           id: 1,
-          name: "abstract"
+          name: "ambience"
         },
         {
           id: 2,
-          name: "city"
+          name: "piano"
         },
         {
           id: 3,
-          name: "landscape"
+          name: "synth"
         }
       ]
     },

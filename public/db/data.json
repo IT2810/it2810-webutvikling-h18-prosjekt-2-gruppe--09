@@ -1,51 +1,51 @@
 {
   "pictures": [
     {
-      "url": "./img/animals/1.svg",
+      "filename": "1",
       "category": "animals"
     },
     {
-      "url": "./img/animals/2.svg",
+      "filename": "2",
       "category": "animals"
     },
     {
-      "url": "./img/animals/3.svg",
+      "filename": "3",
       "category": "animals"
     },
     {
-      "url": "./img/animals/4.svg",
+      "filename": "4",
       "category": "animals"
     },
     {
-      "url": "./img/cars/1.svg",
+      "filename": "1",
       "category": "cars"
     },
     {
-      "url": "./img/cars/2.svg",
+      "filename": "2",
       "category": "cars"
     },
     {
-      "url": "./img/cars/3.svg",
+      "filename": "3",
       "category": "cars"
     },
     {
-      "url": "./img/cars/4.svg",
+      "filename": "4",
       "category": "cars"
     },
     {
-      "url": "./img/nature/1.svg",
+      "filename": "1",
       "category": "nature"
     },
     {
-      "url": "./img/nature/2.svg",
+      "filename": "2",
       "category": "nature"
     },
     {
-      "url": "./img/nature/3.svg",
+      "filename": "3",
       "category": "nature"
     },
     {
-      "url": "./img/nature/4.svg",
+      "filename": "4",
       "category": "nature"
     }
   ],
@@ -93,12 +93,85 @@
       "text": "I can resist everything except temptation.",
       "category": "quote",
       "author": "Oscar Wilde"
+    },
+    {
+      "text": "An old silent pond...\nA frog jumps into the pond,\nsplash! Silence again.\n",
+      "category": "haiku",
+      "author": "Matsuo Basho"
+    },
+    {
+      "text": "In the moonlight,\nThe color and scent of the wisteria\nSeems far away.\n",
+      "category": "haiku",
+      "author": "Yosa Buson"
+    },
+    {
+      "text": "A little boy sings\non a terrace, eyes aglow.\nRidge spills upward.\n",
+      "category": "haiku",
+      "author": "Robert Yehling"
+    },
+    {
+      "text": "ground squirrel\nbalancing its tomato\non the garden fence \n",
+      "category": "haiku",
+      "author": "Don Eulert"
     }
   ],
   "sounds": [
     {
-      "url": "sfiukfdshiu",
-      "category": "music"
+      "filename": "1",
+      "category": "ambience",
+      "type": "audio/mp3"
+    },
+    {
+      "filename": "2",
+      "category": "ambience",
+      "type": "audio/mp3"
+    },
+    {
+      "filename": "3",
+      "category": "ambience",
+      "type": "audio/mp3"
+    },
+    {
+      "filename": "4",
+      "category": "ambience",
+      "type": "audio/mp3"
+    },
+    {
+      "filename": "1",
+      "category": "piano",
+      "type": "audio/wav"
+    },
+    {
+      "filename": "2",
+      "category": "piano",
+      "type": "audio/wav"
+    },
+    {
+      "filename": "3",
+      "category": "piano",
+      "type": "audio/wav"
+    },
+    {
+      "filename": "4",
+      "category": "piano",
+      "type": "audio/wav"
+    },
+    {
+      "filename": "1",
+      "category": "synth",
+      "type": "audio/wav"
+    },    {
+      "filename": "2",
+      "category": "synth",
+      "type": "audio/wav"
+    },    {
+      "filename": "3",
+      "category": "synth",
+      "type": "audio/wav"
+    },    {
+      "filename": "4",
+      "category": "synth",
+      "type": "audio/mp3"
     }
   ]
 }
