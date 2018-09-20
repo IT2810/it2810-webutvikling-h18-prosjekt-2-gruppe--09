@@ -1,10 +1,11 @@
 import React from 'react'
 
 const Slide = ({
-  picture, text, sound
+  picture, text, sound, ...props
 }) =>
-
-  <div className="slide">
+  <li
+    {...props}
+  >
     {picture ?
       <picture>
         <source
@@ -24,13 +25,16 @@ const Slide = ({
       </div> :
       "No text"
     }
-    <audio controls>
-      <source
-        src={sound || ""}
-        type="audio/mp3"
-      />
-      Your browser does not support the audio tag.
-    </audio>
-  </div>
+    {sound ?
+      <audio controls>
+        <source
+          src={sound.url || ""}
+          type={sound.type}
+        />
+        Your browser does not support the audio tag.
+      </audio> :
+      "No audio"
+    }
+  </li>
 
 export {Slide}
