@@ -61,5 +61,6 @@ Firefox / Linux
 ![image](https://user-images.githubusercontent.com/18369201/45872542-8dfe6580-bd90-11e8-9bf6-dc91d891a07d.png)
 Google Chrome / Linux
 
+![screenshot_20180921-103351_2](https://user-images.githubusercontent.com/22095633/45872577-a79fad00-bd90-11e8-8a60-4dfc1da024c8.jpg)
 Google Chrome / Mobil
 
