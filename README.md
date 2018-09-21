@@ -55,8 +55,10 @@ Vi har testet applikasjonen med fokus på brukergrensesnitt og responsiv web des
 
 Testingen ble utført systematisk på de ulike enhetene ved å sjekke alle funksjonene for å forsikre oss om at brukergrensesnittet funker som tenkt på tvers av enheter.
 
+![image](https://user-images.githubusercontent.com/18369201/45872469-67d8c580-bd90-11e8-8d05-fa83b28031f2.png)
 Firefox / Linux
 
+![image](https://user-images.githubusercontent.com/18369201/45872542-8dfe6580-bd90-11e8-9bf6-dc91d891a07d.png)
 Google Chrome / Linux
 
 Google Chrome / Mobil
